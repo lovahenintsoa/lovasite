@@ -1,0 +1,120 @@
+<!DOCTYPE Html>
+<html lang="fr">
+<head>
+<meta charset ="utf-8"/>
+<title> Les formulaires</title>
+<link rel = "stylesheet" href = "form.css"/>
+<script type="text/javascript">
+
+var tab = ["oclock.jpg", "part.jpg"];
+var secondes = 3;
+var numero = -1;
+var
+aleatoire = false;
+
+function changerImage () {
+if (aleatoire) {
+var n = numero;
+while (n == numero) {
+n = Math.floor(Math.random() *
+tab.length);
+}
+numero = n;
+}
+else {
+numero++;
+if (numero >= tab.length) numero =0;
+}
+document.getElementById('image1').src =
+tab[numero];
+setTimeout("changerImage();", secondes*1000);
+}
+
+
+</script>
+
+</head>
+<body>
+
+
+
+<p>Bienvenue sur les Anciens etudiants d'O'Clock</p>
+
+
+<form method= "POST" action="oclock.php">
+
+
+<fieldset>
+<legend > * mention Obligatoire </legend>
+
+
+
+<p> <img class ="img1" src= "oclock.jpg" id="image1"/></p>
+
+<script type="text/javascript">
+
+changerImage();
+
+</script>
+
+
+
+<p> <!-- boutom radio choix sexe entrée 1-->
+
+<input type="radio" name ="sexe" value="homme" id ="homme"/>
+<label for "homme"> Homme </label>
+<input type="radio" name ="sexe" value ="femme" id ="femme"/>
+<label for"femme" > Femme </label>
+
+
+</p>
+
+	<!--zone de texte entrée 2-->
+
+<table width="300" >
+    <tr>
+        <td>Nom *  :</td>
+        <td><input name="nom" type="text" id="nom" placeholder="ex : Pierre"required="required" /></td>
+    </tr>
+    <tr>
+        <td>Prénom *:</td>
+        <td><input name="prenom" type="text" id="prenom" /></td>
+    </tr>
+    <tr>
+        <td>Promotion *:</td>
+        <td><input name="promo" type="Date" id="promo" required="required"/></td>
+    </tr>
+    <tr>
+        
+    </tr>
+</table>
+</fieldset>
+
+
+
+<fieldset>
+<legend> -------------------------</legend>
+<!--zone de texte entrée 3-->
+<table width="300" >
+    <tr>
+        <td>Mail:</td>
+        <td><input name="mel" type="email" id="mel" /></td>
+    </tr>
+   
+    <tr>
+        <td>Tel:</td>
+        <td><input name="tel" type="text" id="tel" size="10" maxlength="10" /></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <div align="center">
+            <input type="submit" name="envoyer" value="Envoyer" />
+            </div>
+        </td>
+    </tr>
+</table>
+
+</form>
+
+</body>
+</html>

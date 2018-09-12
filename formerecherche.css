@@ -1,0 +1,26 @@
+p{
+
+  font-style:italic;
+  color:rgb(255,000,010);
+  text-transform:uppercase;
+ 
+
+ 
+}
+.p0
+{
+  font-style:italic;
+  color:rgb(255,000,010);
+  text-align:center;
+  text-decoration:underline;
+
+}
+.p1
+{
+	width:350px;
+	height:200px;
+	border :2px solid black;
+	background-color:rgb(160,137,007);
+	
+	/*text-align:right;*/
+}
